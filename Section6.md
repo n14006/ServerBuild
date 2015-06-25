@@ -82,14 +82,24 @@ AMI(Amazon Machine Image)を作る
 
 #6-3 Route53
 
-Route53のページを開き、Hosted Zone を開いて、Create Hosted Zone でDomain Name と Commentにわかりやすい名前で記入して Create する。
+ Route53のページを開き、Hosted Zone を開いて、Create Hosted Zone でDomain Name と Commentにわかりやすい名前で記入して Create する。
 
-5-1で作ったzoneファイルの中身をcatコマンドで開き、コピーする。
+ 5-1で作ったzoneファイルの中身をcatコマンドで開き、コピーする。
 
-Import Zone File を押して、コピーした中身を貼り付けてImport する。
+ Import Zone File を押して、コピーした中身を貼り付けてImport する。
 
-更新して書き換えられているのを確認して終わり。
+ 更新して書き換えられているのを確認して終わり。
 
 #6-4 S3
+
+ S3のページを開いて、パケットを作成
+
+ test用のhtmlファイルを作る
+
+ 以下のコマンドを入力
+
+    aws s3 cp 作ったhtmlファイル s3://バケット名/
+
+ S3のページに更新をかけ、test用のファイルが確認できればよい
 
 
